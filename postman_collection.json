@@ -1,0 +1,123 @@
+{
+  "info": {
+    "_postman_id": "928900f1-3194-443f-b724-4f2ed4a3f3c9",
+    "name": "Users",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "3573835",
+    "_collection_link": "https://buttler.postman.co/workspace/b8e481d2-5ab0-475f-859c-08f85c8839e1/collection/3573835-928900f1-3194-443f-b724-4f2ed4a3f3c9?action=share&creator=3573835&source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create user",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"Rafael\",\n    \"password\": \"Lagunas\",\n    \"invite_code\":\"INVITE_TOKEN\" // This is the sample token to use as invitation code, if this is different or empty, will create a user with no admin access\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/user/create"
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/user/login"
+      },
+      "response": []
+    },
+    {
+      "name": "admin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\",\n    \"isAdmin\": \"true\" // This never changes for testing\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/user/admin"
+      },
+      "response": []
+    },
+    {
+      "name": "Validate token",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiUmFmYWVsIiwiaWF0IjoxNjkxNjM5MzQzLCJleHAiOjE2OTE2NDAyNDN9.RcRmeOkhwelanDENIG2a6GeOFqMGjGkrRcRCsH4Bmgg"
+          }
+        },
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:8080/user/validate_token"
+      },
+      "response": []
+    },
+    {
+      "name": "Update information",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\":\"Rafael\",\n    \"password\":\"Lagunas\",\n    \"lastname\":\"Lagunas\",\n    \"email\":\"biro@gmail.com\",\n    \"SSN\":\"01012\",\n    \"birthday\":\"15/04/2002\",\n    \"phone\":\"+529998049373\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/user/add_information"
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJpYXQiOjE2OTE3MjYyOTAsImV4cCI6MTY5MTcyNzE5MH0.yZD1Z9jAh5799uwlchfnxA1rB-KEtZGMaQ43Oj9ZgKU"
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ]
+}

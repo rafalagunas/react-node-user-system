@@ -1,4 +1,4 @@
-# react-node-user-system
+## Configuration
 
 1. clone this repo
 
@@ -16,3 +16,9 @@ docker-composer up
 
 - http://localhost:8080 for api
 - http://localhost:3000 for frontend
+
+## Postman
+
+1. postman_collection.json contains the needed requests to test the api
+
+## Using the app
