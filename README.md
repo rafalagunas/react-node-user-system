@@ -53,3 +53,16 @@ docker-composer up
 - Full unit testing to get a good % of coverage
 - Finish CI integration using Circle CI for both repositories and the main one, for testing and deploying for every stage
 - Postman documentation to complete
+
+## Tools & Technologies
+
+- Docker & Docker Composer
+- MongoDB
+- Node.js
+- Express.js
+- React.js
+- Circle CI (backend)
+- SonarCloud (backend)
+- Axios
+- JWT
+- Bcrypt
