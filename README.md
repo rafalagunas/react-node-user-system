@@ -42,3 +42,14 @@ POST /user/add_information => update information
 ## Postman
 
 1. postman_collection.json contains the needed requests to test the api
+
+### Important notes:
+
+- You will find in the **screenshots** folder specific files for every validation/use case
+
+- To improve:
+
+- Controllers abstraction
+- Full unit testing to get a good % of coverage
+- Finish CI integration using Circle CI for both repositories and the main one, for testing and deploying for every stage
+- Postman documentation to complete
