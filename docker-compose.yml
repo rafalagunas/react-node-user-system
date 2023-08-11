@@ -23,6 +23,7 @@ services:
       - mongo
     expose:
       - 8080
+
   mongo:
     container_name: mongo
     image: mongo
