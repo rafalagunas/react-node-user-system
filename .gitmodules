@@ -2,3 +2,7 @@
 	path = user-system-api
 	url = https://github.com/rafalagunas/user-system-api.git
 	branch = main
+[submodule "user-system-front"]
+	path = user-system-front
+	url = https://github.com/rafalagunas/user-system-front.git
+	branch = main
