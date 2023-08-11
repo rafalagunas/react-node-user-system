@@ -1,0 +1,31 @@
+version: "3"
+services:
+  frontend:
+    build: ./user-system-front
+    ports:
+      - 3000:3000
+    stdin_open: true
+    volumes:
+      - ./user-system-front:/app
+    restart: always
+    depends_on:
+      - backend
+
+  backend:
+    container_name: user-system
+    volumes:
+      - ./user-system-api:/app
+    restart: always
+    build: ./user-system-api
+    ports:
+      - "8080:8080"
+    links:
+      - mongo
+    expose:
+      - 8080
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
