@@ -22,11 +22,11 @@ docker-composer up
 
 ### Available routes for api:
 
-POST /user/create => create user
-POST /user/admin => admin login
-POST /user/login => login for normal users
-GET /user/validate_token => validate a token included in the header as Bearer token
-POST /user/add_information => update information
+- POST /user/create => create user
+- POST /user/admin => admin login
+- POST /user/login => login for normal users
+- GET /user/validate_token => validate a token included in the header as Bearer token
+- POST /user/add_information => update information
 
 \*full examples included in the postman_collection.json
 
@@ -34,10 +34,10 @@ POST /user/add_information => update information
 
 ### Available routes for frontend:
 
-/ => register
-/login => login
-/update_profile => to update profile, username and password are required to be the same to update the information
-/admin => administrator login, prints in the console.log and in a simple alert the users array from database containing all users
+- / => register
+- /login => login
+- /update_profile => to update profile, username and password are required to be the same to update the information
+- /admin => administrator login, prints in the console.log and in a simple alert the users array from database containing all users
 
 ## Postman
 
