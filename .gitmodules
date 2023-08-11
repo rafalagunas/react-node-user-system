@@ -1,0 +1,3 @@
+[submodule "user-system-api"]
+	path = user-system-api
+	url = https://github.com/rafalagunas/user-system.git
